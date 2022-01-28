@@ -1,6 +1,6 @@
 #!/bin/bash
 # author: Max Devaine <maxdevaine@gmail.com>
-# license: GPLv3
+# license: GNU GPLv3
 
 # create list of users from running processes
 USER_LIST=`ps ax o user:16 | awk 'NR>1 {print $1}' | sort -u`
