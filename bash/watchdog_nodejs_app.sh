@@ -1,9 +1,13 @@
 #!/bin/bash
+# author: Max Devaine <maxdevaine@gmail.com>
+# created: 2020/05
+# license: GNU GPLv3
+
+# description
 # this program is watchdog for nodejs app
 # response code 200 = all ok
 # another else than 200 = do restart nodejs, log to file and send email message
-# author: Max Devaine <maxdevaine@gmail.com>
-# license: GNU GPLv3
+
 
 SERVERLIST=("127.0.0.1:5000" "127.0.0.1:5001" "127.0.0.1:5002" "127.0.0.1:5003")
 CHECKURL="curl -k --connect-timeout 15 --write-out '%{http_code}' --silent --output /dev/null"
