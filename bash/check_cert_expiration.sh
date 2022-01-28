@@ -1,6 +1,6 @@
 #!/bin/bash
 # author: Max Devaine <maxdevaine@gmail.com>
-# license: GPLv3
+# license: GNU GPLv3
 
 EMAIL="email1@domain.tld,email2@domain.tld"
 MAILFROM="certcheck@domain.tld"
