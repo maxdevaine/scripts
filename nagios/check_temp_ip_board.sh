@@ -4,7 +4,7 @@
 # license: GNU GPLv3
 #
 # nagios module for IP Smart Board device: http://www.mikrovlny.cz/cz/produkt/64
-# - SNMP is unstable, this is implementatio via web: http://${HOSTNAME}/status.xml
+# - SNMP is unstable, this is implementation via web: http://${HOSTNAME}/status.xml
 # 
 # This defines if you want to trigger a critical alert if the checked
 # 0 = NO NOTIFICATION; 3 = UNKNOWN; 2 = CRITICAL
