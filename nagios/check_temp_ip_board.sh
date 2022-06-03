@@ -47,26 +47,25 @@ SMALLER=$8
 NUMBER='^[0-9]+$'
 
 
-
 ### Testing parameters :
 
 if ! [[ $LARGE =~ $NUMBER ]]; then
   echo "Large : $LARGE is not number !!!"
-exit $STATE_UNKNOWN
+  exit $STATE_UNKNOWN
 fi
 
 if ! [[ $SMALLER =~ $NUMBER ]]; then
   echo "Smaller : $SMALLER is not number !!!"
-exit $STATE_UNKNOWN
+  exit $STATE_UNKNOWN
 fi
 
 if [[ $SMALLER -le $LARGE ]]; then
   echo "Smaller: $SMALLER cant be <= than Large: $LARGE !!!"
-exit $STATE_UNKNOWN
+  exit $STATE_UNKNOWN
 fi
 
 if [ $SENSOR == temp ]; then
-SNR=Temperature
+  SNR=Temperature
 fi
 
 
@@ -97,23 +96,20 @@ fi
 
 if [ $VAL ]; then
   if [ $STATE -eq  $STATE_OK ]; then
-    echo "OK: The $SNR is ${VAL} ${UNIT} | $SNR=${VAL}${UNIT};$LARGE;$SMALLER;0;0"
-  exit $STATE_OK
-
+   echo "OK: The $SNR is ${VAL} ${UNIT} | $SNR=${VAL}${UNIT};$LARGE;$SMALLER;0;0"
+   exit $STATE_OK
   elif [ $STATE -eq  $STATE_CRITICAL ]; then
-     echo "Critical: The $SNR is ${VAL} ${UNIT} | $SNR=${VAL}${UNIT};$LARGE;$SMALLER;0;0"
-  exit $STATE_CRITICAL
+    echo "Critical: The $SNR is ${VAL} ${UNIT} | $SNR=${VAL}${UNIT};$LARGE;$SMALLER;0;0"
+    exit $STATE_CRITICAL
   elif [ $STATE -eq  $STATE_UNKNOWN ]; then
-     echo "Unknown | $SNR state is unknown"
-  exit $STATE_UNKNOWN
+    echo "Unknown | $SNR state is unknown"
+    exit $STATE_UNKNOWN
  fi
 
 else
   echo "Someone value not defined"
-exit $STATE_UNKNOWN
+  exit $STATE_UNKNOWN
 fi
-
-
 
 
 # In case we received a wrong syntax, do the following
