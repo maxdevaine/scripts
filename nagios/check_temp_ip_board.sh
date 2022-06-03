@@ -47,7 +47,7 @@ SMALLER=$8
 NUMBER='^[0-9]+$'
 
 
-### Testing parameters :
+### Test of parameters :
 
 if ! [[ $LARGE =~ $NUMBER ]]; then
   echo "Large : $LARGE is not number !!!"
