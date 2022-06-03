@@ -1,6 +1,6 @@
 #!/bin/bash
 # author: Max Devaine <maxdevaine@gmail.com>
-# created: 2022/01
+# created: 2016/01
 # license: GNU GPLv3
 #
 # nagios module for IP Smart Board device: http://www.mikrovlny.cz/cz/produkt/64
