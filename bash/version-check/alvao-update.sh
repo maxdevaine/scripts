@@ -8,7 +8,7 @@ CONTACT=`head -1 /home/version-check/scripts/_contact`
 STATFILE=/home/version-check/scripts/tmp/alvao-curver
 CURVER=`cat ${STATFILE}`
 CURURL=`wget -qO- https://www.alvao.com/en/download grep "<a href=" |grep "www.alvao.com/en/download" |grep btn-primary |awk '{print $6}' | cut -d'"' -f 2`
-NEWVER=`wget -qO- https://www.alvao.com/en/download/alvao-11-0/ |grep "Version:" |tr -s "<strong>" "\n" | tac | sed -n '3p'`
+NEWVER=`wget -qO- ${CURURL} |grep "Version:" |tr -s "<strong>" "\n" | tac | sed -n '3p'`
 
 if [ "$CURVER" != "$NEWVER" ]; then
     echo "Je nová verze Alvao ""$NEWVER"" !!!"
