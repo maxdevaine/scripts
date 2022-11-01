@@ -2,7 +2,7 @@
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2019/06
 # license: GNU GPLv3
-# description: parse html web page to check actual version of Samba, notify via email in case of new version
+# description: parse html web page to check current version of Samba, notify via email in case of new version
 
 STATFILE=/home/version-check/scripts/tmp/samba4-curver
 CONTACT=`head -1 /home/version-check/scripts/_contact`
