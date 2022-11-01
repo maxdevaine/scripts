@@ -12,7 +12,7 @@ NEWVER=`wget -qO- --no-check-certificate ${URL} |grep Version | sed 's/<[^>]*>//
 
 if [ "$CURVER" != "$NEWVER" ]; then
   echo "It's new version of GFI MailArchiver: ${NEWVER}"
-  echo -e "It's new version of GFI MailArchiver: ${CURVER}/${NEWVER} \n """${URL}"""" | mail -s "GFI MailArchiver new version: ${NEWVER}" ${CONTACT}
+  echo -e "It's new version of GFI MailArchiver: ${CURVER}/${NEWVER} \n ${URL}" | mail -s "GFI MailArchiver new version: ${NEWVER}" ${CONTACT}
 
 else
   echo "Version ${CURVER} is up to date."
