@@ -2,7 +2,7 @@
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2019/06
 # license: GNU GPLv3
-# description: parse html web page to check actual version of GFI Mail Archiver, notify via email in case of new version
+# description: parse html web page to check current version of GFI Mail Archiver, notify via email in case of new version
 
 CONTACT=`head -1 /home/version-check/scripts/_contact`
 CURVER="15.3"
