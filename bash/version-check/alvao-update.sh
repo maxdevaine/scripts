@@ -2,7 +2,7 @@
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2022/08
 # license: GNU GPLv3
-# description: parse html web page to check actual version of Alvao product, notify via email in case of new version
+# description: parse html web page to check current version of Alvao product, notify via email in case of new version
 
 CONTACT=`head -1 /home/version-check/scripts/_contact`
 STATFILE=/home/version-check/scripts/tmp/alvao-curver
