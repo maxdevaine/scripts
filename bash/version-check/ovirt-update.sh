@@ -2,7 +2,7 @@
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2019/06
 # license: GNU GPLv3
-# description: parse html web page to check actual version of the oVirt, notify via email in case of new version
+# description: parse html web page to check current version of the oVirt, notify via email in case of new version
 
 STATFILE=/home/version-check/scripts/tmp/ovirt-curver
 CURVER=`cat ${STATFILE}`
