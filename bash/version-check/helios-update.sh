@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2022/08
 # license: GNU GPLv3
