@@ -11,6 +11,7 @@ $mailbox = user1
 
 while ($var -le 2) {
    search-mailbox -identity $mailbox -searchquery {received:01/04/2015..05/10/2021} -deletecontent -force
+   #Search-Mailbox -Identity $mailbox -SearchQuery 'Received<="2022-08-31" AND kind:email' -DeleteContent -force
    Write-Host The value of Var is: $var
    $var++
 }
