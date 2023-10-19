@@ -16,6 +16,7 @@ SFTP_PW=sftppassword
 
 FILE=dbtable.csv
 FILE_DIR=/tmp
+MINBACKUPSIZE=120
 
 # Check if file exists
 if [ -f "${FILE_DIR}/${FILE}" ]; then
@@ -25,6 +26,15 @@ fi
 
 # Generate a new file
 mysql -u ${DB_USER} -p${DB_PASS} seznam < "${DB_SELECT}";
+
+# Check size of the dump to prevent transfer damaged file
+BACKUPSIZE=`wc -c ${FILE_DIR}/${FILE} |awk '{print $1}'`
+
+MINBACKUPSIZE=$((${MINBACKUPSIZE}*1024))
+if [[ -z "${BACKUPSIZE}" ]] || (( ${BACKUPSIZE} < ${MINBACKUPSIZE} )); then
+   echo Error ${BACKUPSIZE} vs ${MINBACKUPSIZE}, exiting script.
+   exit 0;
+fi
 
 # Upload a new file to sftp
 cd ${FILE_DIR}
