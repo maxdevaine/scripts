@@ -2,7 +2,7 @@
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2023/10
 # license: GNU GPLv3
-# description: Dump a Table from MariaDB Database and copy a Dump to a sftp server
+# description: Dump a Table from MariaDB Database and copy a dump File to a sftp server
 
 # Variables
 DB_USER=dbuser
