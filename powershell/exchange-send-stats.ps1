@@ -1,4 +1,3 @@
-#!/bin/bash
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2022/01
 # license: GNU GPLv3
