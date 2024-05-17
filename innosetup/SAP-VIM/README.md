@@ -47,6 +47,9 @@ Output = Final install package \
 source = all content is inside source.zip file \
 SAPVIM-Installer-x.x.x.exe contains "source.zip" and all exe utilities.  \
 
+Most of all packages have enabled installation logs, so all this logs are in this directory \
+C:\company_sap\logs
+
 For more info see installer script.
 
  
