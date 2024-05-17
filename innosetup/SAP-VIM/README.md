@@ -1,7 +1,8 @@
 # All in one installer couple of packages
-This is all-in-one installer many of packages and configuration.
-It's for speed up installation and configuration process for new client stations (PC/NTB).
-This installer just install many packages and configuration, but doesn't contains unsoinatlation procedures. So, you have to go to install programs (Windows -> control panel -> ...) and uinstall each of packages.
+This is all-in-one installer many of packages and configuration. \
+It's for speed up installation and configuration process for new client stations (PC/NTB). \
+Installer reduces install steps from cca 75 to 10 and allow remote silent install / deploy. \
+This installer just install many packages and configuration, but doesn't contains uninstalation procedures. So, you have to go to install programs (Windows -> control panel -> ...) and uinstall each of packages.
 
 ### Directory structure should be:
 * VIM-Installer
@@ -44,6 +45,8 @@ This installer just install many packages and configuration, but doesn't contain
 ### Explain
 Output = Final install package \
 source = all content is inside source.zip file \
-SAPVIM-Installer-x.x.x.exe contains "source.zip" and all exe utilities.
+SAPVIM-Installer-x.x.x.exe contains "source.zip" and all exe utilities.  \
+
+For more info see installer script.
 
  
