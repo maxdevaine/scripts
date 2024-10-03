@@ -5,6 +5,10 @@
 # Watchdog script to check Geovision GV-VMS client access process)
 # example for use: -processname CMSvr -programpath C:\GV-VMS\CMSvr.exe -weburl http://192.168.1.1:5611
 
+# Windows scheduler example
+# Program: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+# Parameters: -NoProfile -ExecutionPolicy Bypass -File "C:\scripts\watchdog\watchdog-geovision-vms.ps1" -processname CMSvr -programpath C:\GV-VMS\CMSvr.exe -weburl http://192.168.1.1:5611
+
 # set variables
 param ($processname, $programpath, $weburl)
 
