@@ -20,7 +20,6 @@ function GetWebUrlStatusCode {
       [int]$StatusCode = $Response.StatusCode
       
       # change variable if timeout happend
-      $Error[0].Exception
       If (($Error[0].Exception) -match 'timed out') {
         $StatusCode = 2
       }
