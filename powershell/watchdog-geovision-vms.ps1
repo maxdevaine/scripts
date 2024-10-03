@@ -28,7 +28,7 @@ function GetWebUrlStatusCode {
     }
 }
 
-# function to find process by name and kill them
+# function to find process by name and kill it
 function KillMonitoredProcess {
   $processtokill = Get-Process -name $processname -ErrorAction SilentlyContinue
   if ($processtokill -ne $null) {
