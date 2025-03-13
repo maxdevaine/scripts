@@ -21,3 +21,16 @@ select userinfo.username, radusergroup.groupname, userinfo.creationdate, userinf
     left join radreply on userinfo.username = radreply.username
     left join radusergroup on userinfo.username = radusergroup.username 
     left join radpostauth on userinfo.username = radpostauth.username
+   
+-- last 10 login dates for user
+SELECT * FROM `radacct` WHERE username = 'user' order by acctstarttime desc limit 10;
+
+-- last login date for all specific users with same prefix
+SELECT username,acctstarttime FROM 
+(
+ SELECT * FROM `radacct`
+ WHERE username like 'userxy%'
+ ORDER BY acctstarttime desc
+) t1
+GROUP BY username desc
+;
