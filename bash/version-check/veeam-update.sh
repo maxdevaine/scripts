@@ -2,7 +2,7 @@
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2023/08
 # license: GNU GPLv3
-# description: parse html web page to check current version of Helios CLA IQ product, notify via email in case of new version
+# description: parse html web page to check current version of Veeam and Replication product, notify via email in case of new version
 
 CONTACT=`head -1 /home/version-check/scripts/_contact`
 STATFILE=/home/version-check/scripts/tmp/veeam-curver
