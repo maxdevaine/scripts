@@ -2,7 +2,7 @@
 # author: Max Devaine <maxdevaine@gmail.com>
 # created: 2025/08
 # license: GNU GPLv3
-# description: parse html web page to check current version of Helios CLA IQ product, notify via email in case of new version
+# description: parse html web page to check current version of N-Central product, notify via email in case of new version
 
 STATFILE=/home/version-check/scripts/tmp/ncentral-curver
 CURVER=`cat ${STATFILE}`
