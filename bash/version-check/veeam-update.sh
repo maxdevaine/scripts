@@ -8,7 +8,7 @@ CONTACT=`head -1 /home/version-check/scripts/_contact`
 STATFILE=/home/version-check/scripts/tmp/veeam-curver
 CURVER=`cat ${STATFILE}`
 URLVERS="https://www.veeam.com/kb2680"
-NEWVER=`wget -qO- ${URLVERS} |grep "<tr><td>Veeam Backup" |tr -s "<\tr>" "\n" | grep "Veeam Backup" | head -1`
+NEWVER=`wget -qO- ${URLVERS} |grep "<td>Veeam Backup" |tr -s "<\tr>" "\n" | grep "Veeam Backup" | head -1 | awk '{print $5}'`
 
 
 if [ "$CURVER" != "$NEWVER" ]; then
