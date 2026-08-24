@@ -1,5 +1,5 @@
 #!/bin/bash
-# author: Max Devaine <maxdevaine@gmail.com>
+# author: Gemini AI + Max Devaine <maxdevaine@gmail.com>
 # created: 2026/07
 # license: GNU GPLv3
 
