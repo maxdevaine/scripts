@@ -4,7 +4,7 @@
 # description
 # List all folders in a mailbox and display stats (name, path, item count, size in MiB)
 
-Get-MailboxFolderStatistics -Identity "pricescn@metrans.eu" -ResultSize Unlimited | 
+Get-MailboxFolderStatistics -Identity "user@domain.tld" -ResultSize Unlimited | 
     Select-Object @{Name="Název"; Expression={$_.Name}},
         @{Name="Cesta"; Expression={$_.FolderPath}},
         @{Name="Počet položek"; Expression={$_.ItemsInFolder}},
