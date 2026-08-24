@@ -1,3 +1,8 @@
+# author: Gemini AI + Max Devaine <maxdevaine@gmail.com>
+# created: 2026/08
+# license: GNU GPLv3
+# description
+# List all folders in a mailbox and display stats (name, path, item count, size in MiB)
 
 Get-MailboxFolderStatistics -Identity "pricescn@metrans.eu" -ResultSize Unlimited | 
     Select-Object @{Name="Název"; Expression={$_.Name}},
