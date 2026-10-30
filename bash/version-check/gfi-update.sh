@@ -7,7 +7,7 @@
 CONTACT=`head -1 /home/version-check/scripts/_contact`
 CURVER="15.3"
 URL="https://www.gfi.com/products-and-solutions/network-security-solutions/archiver/resources/documentation/product-releases"
-NEWVER=`wget -qO- --no-check-certificate ${URL} |grep Version | sed 's/<[^>]*>//g' | cut -c 13-| head -1 | tr -d '\r'`
+NEWVER=`wget -qO- --no-check-certificate ${URL} |grep -oP '<h3>Version \K[0-9.]+(?=</h3>)' | head -1`
 
 
 if [ "$CURVER" != "$NEWVER" ]; then
